@@ -38,7 +38,8 @@ class SmsController extends Controller
 
             return back()->with('status', 'Message sent to '. $totalSent.' out of '.$totalNumbers.' numbers successfully.');
         } catch (\Throwable $th) {
-            return back()->with('status', 'Error encountered while sending message. '. $totalSent.' out of '.$totalNumbers.' messages was sent so far.');
+            return back()->with('error', 'Error encountered while sending message. '. $totalSent.' out of '.$totalNumbers.' messages was sent so far.
+            Error: '.$th->getMessage());
         }
     }
 }
