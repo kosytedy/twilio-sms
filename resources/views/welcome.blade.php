@@ -7,6 +7,7 @@
         <title>Laravel twilio bulk SMS</title>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <!-- Fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     </head>
@@ -18,6 +19,7 @@
                         <div class="card-header" style="border-bottom:2px solid #ffc107">{{ __('Send Bulk SMS') }}</div>
         
                         <div class="card-body">
+                            @include('layout.alerts')
                             <form method="POST" action="{{ route('send') }}">
                                 @csrf
         
